@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
+
+import React, { useState } from "react";
 import {
   Sofa,
   Send,
@@ -8,17 +9,20 @@ import {
   Sparkles,
   Leaf,
   Palette,
-  Clock,
   Heart,
   Shield,
   Instagram,
   Facebook,
-  Twitter,
   Youtube,
-  Linkedin,
 } from "lucide-react";
-import Lottie from "lottie-react";
 import confettiAnimation from "@/data/confetti.json";
+import Link from "next/link";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), {
+  ssr: false, // Disable server-side rendering
+});
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -29,13 +33,6 @@ export default function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
-
-  useEffect(() => {
-    document.documentElement.style.scrollBehavior = "smooth";
-    return () => {
-      document.documentElement.style.scrollBehavior = "auto";
-    };
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -66,15 +63,15 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-lg z-50 border-b border-violet-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <a
-              href="/"
+            <Link
+              href="#hero"
               className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
             >
               <Sofa className="h-6 w-6 sm:h-8 sm:w-8 text-violet-600" />
               <span className="text-xl sm:text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600">
                 Cony
               </span>
-            </a>
+            </Link>
             <button
               className="md:hidden p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -153,7 +150,10 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 relative overflow-hidden">
+      <section
+        id="#hero"
+        className="pt-24 sm:pt-32 pb-12 sm:pb-20 relative overflow-hidden"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6 sm:space-y-8 relative z-10">
@@ -187,10 +187,12 @@ export default function Home() {
 
             <div className="relative">
               <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl shadow-violet-400/10 group">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&q=80"
                   alt="Modern living room with elegant furniture"
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-violet-900/30 via-violet-900/10 to-transparent"></div>
               </div>
@@ -223,8 +225,8 @@ export default function Home() {
               Crafting Excellence
             </h2>
             <p className="text-lg text-slate-600">
-              Discover what makes our furniture collection unique and why you'll
-              fall in love with every piece.
+              Discover what makes our furniture collection unique and why
+              you&apos;ll fall in love with every piece.
             </p>
           </div>
 
@@ -259,10 +261,12 @@ export default function Home() {
                 key={index}
                 className="group relative aspect-[4/5] rounded-2xl overflow-hidden"
               >
-                <img
+                <Image
                   src={image.url}
                   alt={image.alt}
-                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-violet-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="absolute bottom-0 left-0 right-0 p-6">
