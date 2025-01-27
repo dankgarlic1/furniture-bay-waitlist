@@ -69,7 +69,7 @@ export default function Home() {
             >
               <Sofa className="h-6 w-6 sm:h-8 sm:w-8 text-violet-600" />
               <span className="text-xl sm:text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600">
-                Cony
+                FurnitureBay
               </span>
             </Link>
             <button
@@ -360,7 +360,7 @@ export default function Home() {
               <div className="flex items-center space-x-2">
                 <Sofa className="h-8 w-8 text-violet-600" />
                 <span className="text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600">
-                  Cony
+                  FurnitureBay
                 </span>
               </div>
               <p className="text-slate-600">
@@ -399,7 +399,7 @@ export default function Home() {
             <div>
               <h4 className="font-semibold text-slate-800 mb-4">Contact</h4>
               <ul className="space-y-2">
-                <li className="text-slate-600">hello@cony.com</li>
+                <li className="text-slate-600">hello@furniturebay.com</li>
                 <li className="text-slate-600">+91 9870595129</li>
               </ul>
             </div>
@@ -433,7 +433,7 @@ export default function Home() {
           </div>
           <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-violet-100">
             <p className="text-center text-slate-600">
-              © {new Date().getFullYear()} Cony. All rights reserved.
+              © {new Date().getFullYear()} FurnitureBay. All rights reserved.
             </p>
           </div>
         </div>
