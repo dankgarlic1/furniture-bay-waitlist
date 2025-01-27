@@ -1,22 +1,41 @@
-import { LampContainer } from "./ui";
+// "use client";
+// import { motion } from "framer-motion";
+// import { Button } from "./ui";
 
-export default function Hero() {
-  return (
-    <LampContainer>
-      <div className="relative z-10 text-center text-gray-800">
-        <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in-up">
-          Conny - Modern Furniture
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 animate-fade-in-up animation-delay-200">
-          Stylish, quality furniture for your perfect space.
-        </p>
-        <a
-          href="#signup"
-          className="bg-gradient-to-r from-blue-500 to-teal-400 text-white px-8 py-3 rounded-full text-lg font-semibold hover:from-blue-600 hover:to-teal-500 transition-all animate-fade-in-up animation-delay-400"
-        >
-          Join the Waitlist
-        </a>
-      </div>
-    </LampContainer>
-  );
-}
+// export default function Hero() {
+//   return (
+//     <section className="pt-32 pb-20 px-4">
+//       <div className="container mx-auto flex flex-col lg:flex-row items-center">
+//         <motion.div
+//           initial={{ opacity: 0, x: -50 }}
+//           animate={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.5 }}
+//           className="lg:w-1/2 mb-10 lg:mb-0"
+//         >
+//           <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+//             Redefine Your <span className="text-gradient">Living Space</span>
+//           </h1>
+//           <p className="text-xl mb-8 text-gray-600">
+//             Discover Cony's exquisite furniture collection. Join our waitlist
+//             for exclusive early access and special offers.
+//           </p>
+//           <Button onClick={() => {}}>Join the Waitlist</Button>
+//         </motion.div>
+//         <motion.div
+//           initial={{ opacity: 0, x: 50 }}
+//           animate={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.5, delay: 0.2 }}
+//           className="lg:w-1/2"
+//         >
+//           <img
+//             src="/hero2.jpg"
+//             alt="Modern furniture showcase"
+//             height={300}
+//             width={650}
+//             className="rounded-lg shadow-2xl animate-float max-w-full h-auto"
+//           />
+//         </motion.div>
+//       </div>
+//     </section>
+//   );
+// }
