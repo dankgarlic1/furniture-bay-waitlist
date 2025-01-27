@@ -4,9 +4,9 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Cony - Modern Furniture, Coming Soon!",
+  title: "FurnitureBay - Modern Furniture, Coming Soon!",
   description:
-    "Join the waitlist for Cony, your source for stylish, quality furniture.",
+    "Join the waitlist for FurnitureBay, your source for stylish, quality furniture.",
 };
 
 export default function RootLayout({
